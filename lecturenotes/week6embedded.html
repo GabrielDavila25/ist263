@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 6 Embedded CSS</title>
+    <style>
+      h1 {
+        color: rebeccapurple;
+      }
+      /*body selects everything*/
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        background-color: darkmagenta;
+      }
+      /* in em 2 is twice the default size */
+      p,
+      h1,
+      a {
+        /*g grouped selector*/
+        font-size: 2em;
+        font-weight: bolder;
+        background-color: salmon;
+      }
+        p a {text-decoration: none}
+        #secondpara {color:darkcyan;}
+        .yellow {color:greenyellow;}
+      
+    </style>
+  </head>
+  <body>
+    <h1>CSS</h1>
+    <a href="http://www.amazon.com">Amazon</a>
+    <p>
+      <a href="http://www.amazon.com">Amazon</a>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      voluptas velit deserunt ex ullam, ea error reiciendis voluptates alias
+      animi expedita itaque, molestiae temporibus corporis voluptatem doloremque
+      dicta. Dolores, minima.
+    </p>
+    <p id="secondpara"></p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      voluptas velit deserunt ex ullam, ea error reiciendis voluptates alias
+      animi expedita itaque, molestiae temporibus corporis voluptatem doloremque
+      dicta. Dolores, minima.</p>
+  </body>
+</html>
