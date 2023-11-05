@@ -18,7 +18,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: #2272FF; /* Neon blue */
+  color: #3bb4e9; /* Neon blue */
   font-size: 2.5em;
 }
 
@@ -42,12 +42,12 @@ nav a {
   margin-right: 10px;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #2272FF; /* Neon blue accent color */
+  background-color: #3bb4e9; /* Neon blue accent color */
   transition: background-color 0.3s;
 }
 
 nav a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #3bb4e9; /* Darker blue on hover */
 }
 
 table {
@@ -62,7 +62,7 @@ th, td {
 }
 
 th {
-  background-color: #2272FF; /* Neon blue accent color */
+  background-color: #3bb4e9; /* Neon blue accent color */
   color: #fff;
 }
 
@@ -85,7 +85,7 @@ form input[type="text"], form textarea {
 }
 
 form input[type="submit"] {
-  background-color: #2272FF; /* Neon blue accent color */
+  background-color: #3bb4e9; /* Neon blue accent color */
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -95,7 +95,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #3bb4e9; /* Darker blue on hover */
 }
 h1 {
   text-align: center; /* This will center the text within the heading */
