@@ -62,7 +62,7 @@
   }
   
   th {
-    background-color: #2272FF;
+    background-color: #4d8eff;
     color: #fff;
   }
   
@@ -85,7 +85,7 @@
   }
   
   form input[type="submit"] {
-    background-color: #0056b3; 
+    background-color: #4d8eff; 
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -95,7 +95,7 @@
   }
   
   form input[type="submit"]:hover {
-    background-color: #0056b3; 
+    background-color: #4d8eff; 
   }
   h1 {
     text-align: center; 
@@ -201,4 +201,15 @@
         margin-bottom: 0;
       }
     }
-  
+    .skip {
+      background-color: lightgrey;
+      padding: 5px;
+      border: 1px solid #000000;
+      text-decoration: none;
+      position: absolute; 
+      top: 10px;
+      left: -999px; 
+    }
+    .skip:focus {
+      left: 10px;
+    }
