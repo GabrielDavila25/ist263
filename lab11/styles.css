@@ -18,7 +18,7 @@
   }
   
   h1 {
-    color: #669eff; 
+    color: #005eff; 
     font-size: 2.5em;
   }
   
@@ -42,12 +42,12 @@
     margin-right: 10px;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #669eff;
+    background-color: #005eff;
     transition: background-color 0.3s;
   }
   
   nav a:hover {
-    background-color: #669eff; 
+    background-color: #005eff; 
   }
   
   table {
@@ -62,7 +62,7 @@
   }
   
   th {
-    background-color: #4d8eff;
+    background-color: #005eff;
     color: #fff;
   }
   
@@ -85,7 +85,7 @@
   }
   
   form input[type="submit"] {
-    background-color: #4d8eff; 
+    background-color: #005eff; 
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -95,7 +95,7 @@
   }
   
   form input[type="submit"]:hover {
-    background-color: #4d8eff; 
+    background-color: #005eff; 
   }
   h1 {
     text-align: center; 
