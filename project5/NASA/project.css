@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                      radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                      radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+                      radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 500px 500px, 490px 490px;
+    background-position: 0 0, 100px 200px, 300px 300px, 200px 100px;
+  }
+
+  
+  nav {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #4fc3f7; 
+  }
+  img {
+    display: block;
+    max-width: 80%; 
+    height: auto; 
+    margin: 20px auto; 
+  }
+  body, p, h1, h2, h3, h4, h5, h6, nav a {
+    color: white; 
+    font-family: 'Arial', sans-serif; 
+    padding: 5px; 
+    margin: 5px; 
+  }
+  header h1 {
+    font-size: 2.5em; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px; 
+    margin-top: 60px; 
+  }
+  header {
+    padding-top: 80px; 
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.text-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.text-layout div {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; 
+        margin-top: 60px; 
+    }
+
+    nav a {
+        font-size: 16px; 
+    }
+
+    .text-layout {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+
+    .game-thumbnail, .nasa-thumbnail {
+        max-width: 100px; 
+    }
+}

@@ -4,19 +4,181 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriel Davila - Campos | Interactive Data Tools</title>
+    <link rel="stylesheet" href="../project5/NASA/project.css" />
+    <link rel="stylesheet" href="../project5/javascript.js" />
   </head>
+  <style>
+    .game-link-card {
+      border: 2px solid #4fc3f7;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .game-link-card:hover {
+      transform: scale(1.05);
+    }
+
+    .game-link-card a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .game-thumbnail {
+      width: 100%;
+      height: auto;
+    }
+
+    .game-description {
+      background-color: #000;
+      padding: 15px;
+    }
+
+    .game-description h3 {
+      margin-top: 0;
+    }
+    #getting-started,
+    #data-tools-list {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    #data-tools-list ul {
+      padding-left: 20px;
+    }
+
+    #data-tools-list a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    #data-tools-list a:hover {
+      color: #ff0;
+    }
+
+    h2,
+    h3 {
+      color: #4fc3f7;
+    }
+    .game-link-card {
+      text-align: center;
+    }
+
+    .game-link-card a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .game-thumbnail {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .nasa-link-card {
+      text-align: center;
+      border: 2px solid #4fc3f7;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 20px 0;
+    }
+
+    .nasa-link-card:hover {
+      transform: scale(1.05);
+    }
+
+    .nasa-thumbnail {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .nasa-description {
+      padding: 15px;
+      color: #fff;
+    }
+
+    .nasa-description .link-text a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    .nasa-description .link-text a:hover {
+      color: #ff0;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 23px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #4fc3f7;
+    }
+    #getting-started,
+    #data-tools-list {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    #data-tools-list ul {
+      padding-left: 20px;
+    }
+
+    #data-tools-list a,
+    .nasa-link-card a,
+    .game-link-card a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    #data-tools-list a:hover,
+    .nasa-link-card a:hover,
+    .game-link-card a:hover {
+      color: #ff0;
+    }
+
+    h2,
+    h3 {
+      color: #4fc3f7;
+    }
+  </style>
   <body>
     <header>
       <h1>Analyze The Cosmos</h1>
       <p>
         Dive into real NASA datasets and navigate through the wonders of space.
-        Whether you're a data enthusiast or a space lover, our interactive tools
-        provide a hands-on experience, fostering a deeper understanding of
+        Whether you're a data enthusiast or a space lover, these interactive
+        tools provide a hands-on experience, fostering a deeper understanding of
         NASA's extraordinary work
       </p>
     </header>
 
-    <nav>
+    <nav class="text-size">
       <a href="index.html">Home</a><br />
       <a href="missions.html">Missions in Detail</a><br />
       <a href="data_tools.html">Interactive Data Tools</a><br />
@@ -27,22 +189,55 @@
       <section id="getting-started">
         <h2>Getting Started</h2>
         <p>
-          Not sure where to begin? Take our Interactive Tutorial and become a
-          space data explorer in minutes!
+          Not sure where to begin? Start with these Interactive Tools and become
+          a space data explorer in minutes!
         </p>
       </section>
 
       <section id="data-tools-list">
-        <h2>List of Datasets and Tools</h2>
-        <p>Here you'll find a variety of datasets and tools to explore:</p>
-->
-        <ul>
-          <li>
-            <h3>Dataset/Tool Name</h3>
-            <p>Brief description of the dataset or tool.</p>
-          </li>
-          <!-- More list items for other datasets and tools, for this I will need to use javascrit and because its strictly html I ill work on that on another day-->
-        </ul>
+        <h2>List of Tools</h2>
+        <p>Here you'll find some exciting tools to explore:</p>
+
+        <div class="nasa-link-card">
+          <a href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">
+            <img
+              src="../images/nasa.png"
+              alt="NASA JPL/EYES"
+              class="nasa-thumbnail"
+            />
+            <div class="nasa-description">
+              <h3>NASA JPL/EYES</h3>
+              <p>
+                NASA's Eyes, developed by the Jet Propulsion Laboratory (JPL) at
+                the California Institute of Technology, is an interactive
+                program that allows users to explore Earth, the solar system,
+                and the universe. It offers a unique educational experience for
+                learning about our planet, the solar system, and the vastness of
+                space, as well as the various spacecraft exploring these realms.
+              </p>
+              <p class="link-text">
+                Click
+                <a href="https://eyes.nasa.gov/apps/orrery/#/home">here</a> to
+                go to NASA's Interactive Solar System.
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <div class="game-link-card">
+          <a href="https://spaceplace.nasa.gov/menu/play/" target="_blank">
+            <div class="game-thumbnail">
+              <img src="../images/nasa.png" alt="NASA Space Game" />
+            </div>
+            <div class="game-description">
+              <h3>Explore NASA's Space Adventures</h3>
+              <p>
+                Click here to play interactive space games and learn about the
+                cosmos in a fun way!
+              </p>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 

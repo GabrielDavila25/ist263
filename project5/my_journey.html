@@ -4,6 +4,113 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriel Davila - Campos | My Journey</title>
+    <link rel="stylesheet" href="../project5/NASA/project.css" />
+    <link rel="stylesheet" href="../project5/javascript.js" />
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+
+header {
+    background: #1c1c1c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4fc3f7;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #4fc3f7;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #4fc3f7;
+    border-bottom: 2px solid #4fc3f7;
+    padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+}
+header {
+    padding-top: 120px; 
+}
+.contact-section {
+    background: url('../images/space-dashboard.jpg') no-repeat center center/cover; 
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-panel {
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+.contact-info a {
+    color: #4fc3f7; 
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+    color: #ff0; 
+}
+
+
+
+    </style>
+
   </head>
   <body>
     <header>
@@ -78,14 +185,19 @@
         </p>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="contact-section">
         <h2>Contact Me</h2>
-        <address>
-          <p>Email: <a href="mailto:gdavil01@syr.edu">gdavil01@syr.edu</a></p>
-          <p>Phone: <a href="tel:+17864799049">+1 (786) 479 9049</a></p>
-          <p>LinkedIn: <a href="www.linkedin.com/in/gabriel-davila-campos-134969218" target="_self">www.linkedin.com/in/gabriel-davila-campos-134969218</a></p>
-        </address>
-      </section>
+        <div class="contact-panel">
+            <div class="contact-info">
+                <p>Email: <a href="mailto:gdavil01@syr.edu">gdavil01@syr.edu</a></p>
+                <p>Phone: <a href="tel:+17864799049">+1 (786) 479 9049</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/gabriel-davila-campos-134969218" target="_blank">Gabriel Davila - Campos</a></p>
+            </div>
+            <!-- Optional: Add a contact form here -->
+        </div>
+    </section>
+    
+
     </main>
 
     <footer>
