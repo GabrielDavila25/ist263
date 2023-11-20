@@ -6,167 +6,168 @@
     <title>Gabriel Davila - Campos | Interactive Data Tools</title>
     <link rel="stylesheet" href="../project5/NASA/project.css" />
     <link rel="stylesheet" href="../project5/javascript.js" />
+    <style>
+      .game-link-card {
+        border: 2px solid #4fc3f7;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .game-link-card:hover {
+        transform: scale(1.05);
+      }
+
+      .game-link-card a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .game-thumbnail {
+        width: 100%;
+        height: auto;
+      }
+
+      .game-description {
+        background-color: #000;
+        padding: 15px;
+      }
+
+      .game-description h3 {
+        margin-top: 0;
+      }
+      #getting-started,
+      #data-tools-list {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        color: #fff;
+      }
+
+      #data-tools-list ul {
+        padding-left: 20px;
+      }
+
+      #data-tools-list a {
+        color: #4fc3f7;
+        text-decoration: none;
+      }
+
+      #data-tools-list a:hover {
+        color: #ff0;
+      }
+
+      h2,
+      h3 {
+        color: #4fc3f7;
+      }
+      .game-link-card {
+        text-align: center;
+      }
+
+      .game-link-card a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .game-thumbnail {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .nasa-link-card {
+        text-align: center;
+        border: 2px solid #4fc3f7;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: 20px 0;
+      }
+
+      .nasa-link-card:hover {
+        transform: scale(1.05);
+      }
+
+      .nasa-thumbnail {
+        max-width: 150px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .nasa-description {
+        padding: 15px;
+        color: #fff;
+      }
+
+      .nasa-description .link-text a {
+        color: #4fc3f7;
+        text-decoration: none;
+      }
+
+      .nasa-description .link-text a:hover {
+        color: #ff0;
+      }
+      nav {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 23px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      nav a:hover {
+        color: #4fc3f7;
+      }
+      #getting-started,
+      #data-tools-list {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0;
+        color: #fff;
+      }
+
+      #data-tools-list ul {
+        padding-left: 20px;
+      }
+
+      #data-tools-list a,
+      .nasa-link-card a,
+      .game-link-card a {
+        color: #4fc3f7;
+        text-decoration: none;
+      }
+
+      #data-tools-list a:hover,
+      .nasa-link-card a:hover,
+      .game-link-card a:hover {
+        color: #ff0;
+      }
+
+      h2,
+      h3 {
+        color: #4fc3f7;
+      }
+    </style>
   </head>
-  <style>
-    .game-link-card {
-      border: 2px solid #4fc3f7;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
 
-    .game-link-card:hover {
-      transform: scale(1.05);
-    }
-
-    .game-link-card a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .game-thumbnail {
-      width: 100%;
-      height: auto;
-    }
-
-    .game-description {
-      background-color: #000;
-      padding: 15px;
-    }
-
-    .game-description h3 {
-      margin-top: 0;
-    }
-    #getting-started,
-    #data-tools-list {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px 0;
-      color: #fff;
-    }
-
-    #data-tools-list ul {
-      padding-left: 20px;
-    }
-
-    #data-tools-list a {
-      color: #4fc3f7;
-      text-decoration: none;
-    }
-
-    #data-tools-list a:hover {
-      color: #ff0;
-    }
-
-    h2,
-    h3 {
-      color: #4fc3f7;
-    }
-    .game-link-card {
-      text-align: center;
-    }
-
-    .game-link-card a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .game-thumbnail {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    .nasa-link-card {
-      text-align: center;
-      border: 2px solid #4fc3f7;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 20px 0;
-    }
-
-    .nasa-link-card:hover {
-      transform: scale(1.05);
-    }
-
-    .nasa-thumbnail {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .nasa-description {
-      padding: 15px;
-      color: #fff;
-    }
-
-    .nasa-description .link-text a {
-      color: #4fc3f7;
-      text-decoration: none;
-    }
-
-    .nasa-description .link-text a:hover {
-      color: #ff0;
-    }
-    nav {
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 23px;
-      transition: color 0.3s ease-in-out;
-    }
-
-    nav a:hover {
-      color: #4fc3f7;
-    }
-    #getting-started,
-    #data-tools-list {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      margin: 20px 0;
-      color: #fff;
-    }
-
-    #data-tools-list ul {
-      padding-left: 20px;
-    }
-
-    #data-tools-list a,
-    .nasa-link-card a,
-    .game-link-card a {
-      color: #4fc3f7;
-      text-decoration: none;
-    }
-
-    #data-tools-list a:hover,
-    .nasa-link-card a:hover,
-    .game-link-card a:hover {
-      color: #ff0;
-    }
-
-    h2,
-    h3 {
-      color: #4fc3f7;
-    }
-  </style>
   <body>
     <header>
       <h1>Analyze The Cosmos</h1>
