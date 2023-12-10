@@ -34,7 +34,7 @@ body {
     color: #4fc3f7; 
   }
   img {
-    display: block;
+    /*display: block;*/
     max-width: 80%; 
     height: auto; 
     margin: 20px auto; 
@@ -59,7 +59,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+ h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
