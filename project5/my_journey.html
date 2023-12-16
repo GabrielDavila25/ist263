@@ -1,221 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Davila - Campos | My Journey</title>
-    <link rel="stylesheet" href="../project5/NASA/project.css" />
-    <link rel="stylesheet" href="../project5/javascript.js" />
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        color: #fff;
-        background-color: #000;
-        line-height: 1.6;
-      }
 
-      header {
-        background: #1c1c1c;
-        padding: 20px 0;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Davila - Campos | My Journey</title>
+  <link rel="stylesheet" href="../project5/NASA/project.css" />
+  <link rel="stylesheet" href="../project5/javascript.js" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/Newerfavicon.png" />
 
-      header h1 {
-        margin: 0;
-        font-size: 2.5em;
-        color: #4fc3f7;
-      }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Orbitron:wght@600&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      color: #fff;
+      background-color: #000;
+      line-height: 1.6;
+    }
 
-      /*nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: #333;
-    margin: 0;
-}
+    header {
+      padding: 20px 0;
+      text-align: center;
+    }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #ffffff;
+    }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2em;
-}
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+    }
 
-nav ul li a.active, nav ul li a:hover {
-    color: #4fc3f7;
-}*/
+    main {
+      margin: 25px;
+    }
 
-      main {
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        margin: 20px;
-      }
+    section {
+      margin-bottom: 20px;
+    }
 
-      section {
-        margin-bottom: 20px;
-      }
+    section h2 {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 5px;
+    }
 
-      section h2 {
-        color: #4fc3f7;
-        border-bottom: 2px solid #4fc3f7;
-        padding-bottom: 5px;
-      }
+    ul {
+      padding-left: 20px;
+    }
 
-      ul {
-        padding-left: 20px;
-      }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+    }
 
-      footer {
-        text-align: center;
-        padding: 20px 0;
-        background-color: #333;
-      }
-      header {
-        padding-top: 120px;
-      }
-      .contact-section {
-        background: url("../images/space-dashboard.jpg") no-repeat center
-          center/cover;
-        color: #fff;
-        padding: 30px;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
+    header {
+      padding-top: 120px;
+    }
 
-      .contact-panel {
-        background: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        border-radius: 10px;
-      }
+    .bannercenter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
 
-      .contact-info p {
-        margin: 10px 0;
-        font-size: 1.1em;
-      }
-      .contact-info a {
-        color: #4fc3f7;
-        transition: color 0.3s ease-in-out;
-      }
+    #modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .contact-info a:hover {
-        color: #ff0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Gabriel Davila - Campos: A Data Odyssey</h1>
-    </header>
+    #modal-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      width: 50%;
+      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
-    <nav>
-      <a href="index.html">Home</a><br />
-      <a href="missions.html">Missions in Detail</a><br />
-      <a href="data_tools.html">Interactive Data Tools</a><br />
-      <a href="my_journey.html">My Journey</a><br />
-    </nav>
+    #subscribe {
+      background-color: #ffffff;
+      padding: 10px 15px;
+      color: #000000;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-    <main>
-      <img src="../images/NewBanner.jpg" alt="My personal banner image" />
-      <section id="academic-achievements">
-        <h2>Academic Achievements</h2>
+    #subscribe:hover {
+      background-color: #818181;
+    }
 
-        <ul>
-          <li>
-            Posse Foundation Full-Tuition Leadership Scholarship (2021 – 2025)
-          </li>
-          <li>Dean’s List (Spring 2022, Fall 2022)</li>
-          <li>
-            School Of Information Studies at Syracuse University - Scholarship
-            in Action Merit Scholarship (Fall of 2023 & Spring of 2024)
-          </li>
-          <li>
-            OTHC Scholarship Recipient
-          </li>
-        </ul>
-      </section>
+    #close-button {
+      float: right;
+      cursor: pointer;
+      font-size: 20px;
+      color: #000;
+    }
 
-      <section id="relevant-coursework">
-        <h2>Relevant Course Work</h2>
+    .input-container {
+      margin-bottom: 15px;
+      color: #000;
+    }
 
-        <ul>
-          <li>Data in Society</li>
-          <li>Application Programming for Information Systems</li>
-          <li>Intro to Front-End Development</li>
-          <li>Information Reporting & Presentation</li>
-          <li>Information Technologies</li>
-          <li>Intro to Networks & Cloud</li>
-          <li>Earth Science</li>
-        </ul>
-      </section>
+    #form-modal {
+      font-family: 'Hedvig Letters Serif', serif;
+    }
 
-      <section id="aspirations">
-        <h2>My Aspirations</h2>
-        <p>
-          From the earliest days of gazing up at the stars, I've always been
-          captivated by the vastness and mysteries of space. But it wasn't just
-          the twinkling lights and distant planets that caught my imagination;
-          it was the vast amounts of data that the universe held, waiting to be
-          decoded. This dual passion led me to the fascinating world of data
-          science. As a budding data scientist, I've always seen data as more
-          than just numbers on a screen.
-        </p>
+    input[type=text],
+    input[type=email],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
 
-        <p>
-          To me, they tell stories, hold secrets, and, most importantly, answer
-          some of the universe's most pressing questions. The opportunity to
-          sift through this data, to decode its messages, and to translate it
-          into meaningful knowledge is what I yearn for. NASA, as the
-          frontrunner in space exploration, has been at the center of my
-          aspirations. The agency's pioneering spirit, combined with its vast
-          datasets collected from decades of space missions, represents the
-          ultimate frontier for a data scientist like me.
-        </p>
-        <p>
-          By joining NASA, I aspire not only to contribute to our understanding
-          of the universe but also to inspire future generations to look at data
-          as a bridge between the known and the unknown. Through my academic and
-          professional journey, I've equipped myself with a diverse set of
-          skills, from machine learning to data visualization. But more than
-          that, I've cultivated a mindset of curiosity, perseverance, and a deep
-          respect for the vastness of space.
-        </p>
-        <p>
-          My dream? To merge the worlds of data science and space exploration at
-          NASA, unraveling the universe's secrets one dataset at a time. NASA,
-          the final frontier. Learn about my aspirations to work at the helm of
-          space exploration, harnessing the power of data to navigate the
-          mysteries of the cosmos.
-        </p>
-      </section>
+    input[type=text]:focus,
+    input[type=email]:focus,
+    textarea:focus {
+      border-color: #818181;
+    }
 
-      <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-panel">
-          <div class="contact-info">
-            <p>Email: <a href="mailto:gdavil01@syr.edu">gdavil01@syr.edu</a></p>
-            <p>Phone: <a href="tel:+17864799049">+1 (786) 479 9049</a></p>
-            <p>
-              LinkedIn:
-              <a
-                href="https://www.linkedin.com/in/gabriel-davila-campos-134969218"
-                target="_blank"
-                >Gabriel Davila - Campos</a
-              >
-            </p>
+    input[type=submit] {
+      background-color: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type=submit]:hover {
+      background-color: #818181;
+    }
+
+    .h2textcolor {
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    #message {
+      width: 100%;
+      height: 100px;
+      resize: none;
+      overflow: auto;
+    }
+
+    .input-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container {
+      margin-bottom: 15px;
+    }
+  </style>
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <p>Explore</p>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Learn More</a></li>
+      <li><a href="data_tools.html">Interactive Data Tools</a></li>
+      <li><a href="my_journey.html">Contact</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>About Me: Gabriel Davila - Campos</h1>
+  </header>
+
+
+
+  <main>
+    <img class="bannercenter" src="../images/NewBanner.jpg" alt="My personal banner image" />
+    <section id="academic-achievements">
+      <h2>Academic Achievements</h2>
+
+      <ul>
+        <li>
+          Posse Foundation Full-Tuition Leadership Scholarship (2021 – 2025)
+        </li>
+        <li>Dean’s List (Spring 2022, Fall 2022)</li>
+        <li>
+          School Of Information Studies at Syracuse University - Scholarship
+          in Action Merit Scholarship (Fall of 2023 & Spring of 2024)
+        </li>
+        <li>OTHC Scholarship Recipient</li>
+      </ul>
+    </section>
+
+    <section id="relevant-coursework">
+      <h2>Relevant Course Work</h2>
+
+      <ul>
+        <li>Data in Society</li>
+        <li>Application Programming for Information Systems</li>
+        <li>Intro to Front-End Development</li>
+        <li>Information Reporting & Presentation</li>
+        <li>Information Technologies</li>
+        <li>Intro to Networks & Cloud</li>
+        <li>Earth Science</li>
+      </ul>
+    </section>
+
+    <section id="aspirations">
+      <h2>My Aspirations</h2>
+      <p>
+        From the earliest days of gazing up at the stars, I've always been
+        captivated by the vastness and mysteries of space. But it wasn't just
+        the twinkling lights and distant planets that caught my imagination;
+        it was the vast amounts of data that the universe held, waiting to be
+        decoded. This dual passion led me to the fascinating world of data
+        science. As a budding data scientist, I've always seen data as more
+        than just numbers on a screen.
+      </p>
+
+      <p>
+        To me, they tell stories, hold secrets, and, most importantly, answer
+        some of the universe's most pressing questions. The opportunity to
+        sift through this data, to decode its messages, and to translate it
+        into meaningful knowledge is what I yearn for. NASA, as the
+        frontrunner in space exploration, has been at the center of my
+        aspirations. The agency's pioneering spirit, combined with its vast
+        datasets collected from decades of space missions, represents the
+        ultimate frontier for a data scientist like me.
+      </p>
+      <p>
+        By joining NASA, I aspire not only to contribute to our understanding
+        of the universe but also to inspire future generations to look at data
+        as a bridge between the known and the unknown. Through my academic and
+        professional journey, I've equipped myself with a diverse set of
+        skills, from machine learning to data visualization. But more than
+        that, I've cultivated a mindset of curiosity, perseverance, and a deep
+        respect for the vastness of space.
+      </p>
+      <p>
+        My dream? To merge the worlds of data science and space exploration at
+        NASA, unraveling the universe's secrets one dataset at a time. NASA,
+        the final frontier. Learn about my aspirations to work at the helm of
+        space exploration, harnessing the power of data to navigate the
+        mysteries of the cosmos.
+      </p>
+    </section>
+    </div>
+    </section>
+
+
+    <p id="subscribe" onclick="openModal();">Contact Me</p>
+    <div id="modal">
+      <div id="modal-content">
+        <span id="close-button" onclick="closeModal();">X</span>
+        <h2 class="h2textcolor">Contact Me</h2>
+        <form id="form-modal" action="your-server-side-script" method="POST">
+          <div class="input-container">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
           </div>
-          <!-- Optional: Add a contact form here -->
-        </div>
-      </section>
-    </main>
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-container">
+            <label for="message">Comments:</label>
+            <textarea id="message" name="message" rows="4" maxlength="1000"></textarea>
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
 
-    <footer>
-      <p>&copy; 2023 Gabriel Davila - Campos</p>
-    </footer>
-  </body>
+
+
+  </main>
+
+  <footer>
+    <hr />
+    <div class="left">&copy; 2023 Gabriel Davila - Campos</div>
+    <div class="right">
+      “You might not think that programmers are artists, but programming is an
+      extremely creative profession. It's logic-based creativity.” - John
+      Romero"
+    </div>
+  </footer>
+</body>
+
 </html>

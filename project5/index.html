@@ -1,457 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Davila - Campos | Home</title>
-    <link rel="stylesheet" href="../project5/NASA/project.css" />
-    <link rel="stylesheet" href="../project5/javascript.js" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="../images/favicon (2).ico"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kalnia:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      h1 {
-        font-family: "Kalnia", serif;
-      }
-      #mission-of-the-day {
-        text-align: center;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Davila - Campos | Home</title>
+  <link rel="stylesheet" href="../project5/NASA/project.css" />
+  <link rel="stylesheet" href="../project5/javascript.js" />
+  <link rel="shortcut icon" type="image/x-icon" href="../images/Newerfavicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Orbitron:wght@600&display=swap"
+    rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      margin: 5px;
+    }
+
+    .text_center {
+      margin: 35px;
+    }
+
+
+    #mission-of-the-day {
+      text-align: left;
+      width: 1600px;
+    }
+
+    #slideshow-container {
+      background-color: #000000;
+      width: 1200px;
+      margin: auto;
+    }
+
+    #bigimages {
+      margin-right: 100px;
+
+    }
+
+    #planetinfo {
+      padding: 100px;
+    }
+
+    #thumbnails {
+      width: 840px;
+      margin: auto;
+      padding-top: 20px;
+    }
+
+    #mercurythumb,
+    #venusthumb,
+    #earththumb,
+    #marsthumb,
+    #jupiterthumb,
+    #saturnthumb,
+    #uranusthumb,
+    #neptunethumb {
+      width: 100px;
+    }
+
+    #venus,
+    #earth,
+    #mars,
+    #jupiter,
+    #saturn,
+    #uranus,
+    #neptune,
+    #venusinfo,
+    #earthinfo,
+    #marsinfo,
+    #jupiterinfo,
+    #saturninfo,
+    #uranusinfo,
+    #neptuneinfo {
+      display: none;
+    }
+
+    #bigimages {
+      float: left;
+    }
+
+    .clearfix {
+      clear: both;
+    }
+
+    .intro {
+      margin: left;
+      width: 300px;
+      color: #000000;
+    }
+
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+
+    #mission-of-the-day .content-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    #mission-of-the-day .text-content {
+      width: 60%;
+      margin: 35px;
+
+    }
+
+    #mission-of-the-day .image-container {
+      width: 80%;
+    }
+
+    #mission-of-the-day .image-container a:hover {
+
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    #mission-of-the-day .image-container a {
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: black;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      display: inline-block;
+      margin: auto;
+    }
+
+
+    .article_image {
+      width: 70%;
+      height: 500px;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 300%;
+    }
+
+    .article_image {
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 20px;
+      margin-left: 10%;
+    }
+
+    .image-container a {
+      display: block;
+
+    }
+
+
+    .SpaceImageAI {
+      width: 870000px;
+      height: 600px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: 10px 0;
+    }
+
+    .new-content-container {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 15px solid #000000;
+      padding: 25px;
+      background-color: #ffffff;
+      color: #000000;
+      width: 49%;
+    }
+
+    .new-text-content,
+    .nasalink1,
+    .nasalink2 {
+      width: 100%;
+    }
+
+    .new-content-container img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
       }
 
-      #mission-of-the-day img {
-        max-width: 50%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+      .new-content-container {
+        width: 100%;
       }
-      #mission-of-the-day a {
-        color: #4fc3f7;
-        font-weight: bold;
-        text-decoration: none;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-        display: inline-block;
-        margin-top: 20px;
-      }
+    }
 
-      #mission-of-the-day a:hover {
-        background-color: #292e33;
-        color: #ff0;
-        text-decoration: none;
-      }
-      header {
-        text-align: center;
-        padding: 20px;
-      }
-      body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background-color: #111111;
-        color: #ffffff;
-      }
-      #slideshow-container {
-        background-color: #000000;
-        width: 1200px;
-        margin: auto;
-      }
-      #bigimages {
-        margin-right: 100px;
-      }
-      #planetinfo {
-        padding: 100px;
-      }
+    .clickable-link {
+      color: #007bff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .content-wrapper,
+      .new-content-container,
+      #slideshow-container,
+      #mission-of-the-day,
+      #bigimages,
       #thumbnails {
-        width: 840px;
-        margin: auto;
-        padding-top: 20px;
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
       }
 
-      #mercurythumb,
-      #venusthumb,
-      #earththumb,
-      #marsthumb,
-      #jupiterthumb,
-      #saturnthumb,
-      #uranusthumb,
-      #neptunethumb {
-        width: 100px;
+      #mission-of-the-day {
+        width: auto;
       }
+    }
+  </style>
+  <script>
+    function MercuryOn() {
+      document.getElementById("mercury").style.display = "block";
+      document.getElementById("mercuryinfo").style.display = "block";
+    }
 
-      #venus,
-      #earth,
-      #mars,
-      #jupiter,
-      #saturn,
-      #uranus,
-      #neptune,
-      #venusinfo,
-      #earthinfo,
-      #marsinfo,
-      #jupiterinfo,
-      #saturninfo,
-      #uranusinfo,
-      #neptuneinfo {
-        display: none;
-      }
+    function VenusOn() {
+      document.getElementById("venus").style.display = "block";
+      document.getElementById("venusinfo").style.display = "block";
+    }
 
-      /*#mercury,
-      #mercuryinfo,
-      #mercurythumb {
-        display: block;
-      }*/
-      #bigimages {
-        float: left;
-      }
+    function EarthOn() {
+      document.getElementById("earth").style.display = "block";
+      document.getElementById("earthinfo").style.display = "block";
+    }
 
-      /*#planetinfo {
-        float: right; 
-      }*/
+    function MarsOn() {
+      document.getElementById("mars").style.display = "block";
+      document.getElementById("marsinfo").style.display = "block";
+    }
 
-      .clearfix {
-        clear: both;
-      }
-    </style>
-    <script>
-      function MercuryOn() {
-        document.getElementById("mercury").style.display = "block";
-        document.getElementById("mercuryinfo").style.display = "block";
-      }
+    function JupiterOn() {
+      document.getElementById("jupiter").style.display = "block";
+      document.getElementById("jupiterinfo").style.display = "block";
+    }
 
-      function VenusOn() {
-        document.getElementById("venus").style.display = "block";
-        document.getElementById("venusinfo").style.display = "block";
-      }
+    function SaturnOn() {
+      document.getElementById("saturn").style.display = "block";
+      document.getElementById("saturninfo").style.display = "block";
+    }
 
-      function EarthOn() {
-        document.getElementById("earth").style.display = "block";
-        document.getElementById("earthinfo").style.display = "block";
-      }
+    function UranusOn() {
+      document.getElementById("uranus").style.display = "block";
+      document.getElementById("uranusinfo").style.display = "block";
+    }
 
-      function MarsOn() {
-        document.getElementById("mars").style.display = "block";
-        document.getElementById("marsinfo").style.display = "block";
-      }
+    function NeptuneOn() {
+      document.getElementById("neptune").style.display = "block";
+      document.getElementById("neptuneinfo").style.display = "block";
+    }
 
-      function JupiterOn() {
-        document.getElementById("jupiter").style.display = "block";
-        document.getElementById("jupiterinfo").style.display = "block";
-      }
+    function PlanetsOff() {
+      document.getElementById("mercury").style.display = "none";
+      document.getElementById("mercuryinfo").style.display = "none";
 
-      function SaturnOn() {
-        document.getElementById("saturn").style.display = "block";
-        document.getElementById("saturninfo").style.display = "block";
-      }
+      document.getElementById("venus").style.display = "none";
+      document.getElementById("venusinfo").style.display = "none";
 
-      function UranusOn() {
-        document.getElementById("uranus").style.display = "block";
-        document.getElementById("uranusinfo").style.display = "block";
-      }
+      document.getElementById("earth").style.display = "none";
+      document.getElementById("earthinfo").style.display = "none";
 
-      function NeptuneOn() {
-        document.getElementById("neptune").style.display = "block";
-        document.getElementById("neptuneinfo").style.display = "block";
-      }
+      document.getElementById("mars").style.display = "none";
+      document.getElementById("marsinfo").style.display = "none";
 
-      function PlanetsOff() {
-        document.getElementById("mercury").style.display = "none";
-        document.getElementById("mercuryinfo").style.display = "none";
+      document.getElementById("jupiter").style.display = "none";
+      document.getElementById("jupiterinfo").style.display = "none";
 
-        document.getElementById("venus").style.display = "none";
-        document.getElementById("venusinfo").style.display = "none";
+      document.getElementById("saturn").style.display = "none";
+      document.getElementById("saturninfo").style.display = "none";
 
-        document.getElementById("earth").style.display = "none";
-        document.getElementById("earthinfo").style.display = "none";
+      document.getElementById("uranus").style.display = "none";
+      document.getElementById("uranusinfo").style.display = "none";
 
-        document.getElementById("mars").style.display = "none";
-        document.getElementById("marsinfo").style.display = "none";
+      document.getElementById("neptune").style.display = "none";
+      document.getElementById("neptuneinfo").style.display = "none";
+    }
+  </script>
+</head>
 
-        document.getElementById("jupiter").style.display = "none";
-        document.getElementById("jupiterinfo").style.display = "none";
+<body>
+  <nav>
+    <div class="logo">
+      <p>Explore</p>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Learn More</a></li>
+      <li><a href="data_tools.html">Interactive Data Tools</a></li>
+      <li><a href="my_journey.html">Contact</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Exploring Space Through Data: A Journey Into NASA’s Missions</h1><br>
+    <p class="text_center">
+      Dive deep into the cosmos and unravel the mysteries of NASA's missions through data. As we venture into the vast
+      expanse of space, data becomes our compass, guiding our understanding and sparking our curiosity. In this
+      endeavor, each piece of data is a stepping stone to greater knowledge, allowing us to translate the complex
+      language of the universe into insights that enlighten and inspire. Through meticulous analysis and interpretation,
+      I hope to bring clarity to the mysteries of distant galaxies and celestial phenomena. My mission is to connect
+      these discoveries to a broader understanding of the universe, emphasizing their significance in the grand scheme
+      of cosmic exploration. Join me on this informative journey, where data not only guides our exploration but also
+      enhances our appreciation of the vastness and beauty of space.
+    </p>
 
-        document.getElementById("saturn").style.display = "none";
-        document.getElementById("saturninfo").style.display = "none";
+    <img class="SpaceImageAI" src="../images/SpaceImageAI.png" alt="Enticing Image of Space" />
 
-        document.getElementById("uranus").style.display = "none";
-        document.getElementById("uranusinfo").style.display = "none";
 
-        document.getElementById("neptune").style.display = "none";
-        document.getElementById("neptuneinfo").style.display = "none";
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <h1>Exploring Space Through Data: A Journey Into NASA’s Missions</h1>
-      <p>
-        Dive deep into the cosmos and unravel the mysteries of NASA's missions
-        through data. As we venture into the vast expanse of space, data becomes
-        our compass, guiding our understanding and sparking our curiosity.
-      </p>
+  </header>
 
-      <img src="../images/Spaceimg.jpeg" alt="Enticing Image of Space" />
-    </header>
+  <main>
 
-    <nav>
-      <a href="index.html">Home</a><br />
-      <a href="missions.html">Missions in Detail</a><br />
-      <a href="data_tools.html">Interactive Data Tools</a><br />
-      <a href="my_journey.html">My Journey</a><br />
-    </nav>
 
-    <main>
-      <div>
-        <section id="mission-of-the-day">
-          <article>
-            <h2>Mission of the Day: NASA's 3D Tissue Chip Research</h2>
-            <p>
-              In the microgravity conditions of space, human physiology
-              experiences unique changes, necessitating innovative approaches to
-              health monitoring and medical treatment. NASA's groundbreaking 3D
-              tissue chip project is at the forefront of space health
-              technology, offering miniature platforms that mimic the structure
-              and function of human organs. These tissue chips are designed to
-              provide insights into cellular responses during spaceflight,
-              enabling researchers to study potential health issues astronauts
-              might face.<br />
-            </p>
-            <p>
-              The tissue chip technology developed through collaborations
-              between NASA and other research entities is vital for personalized
-              astronaut healthcare in space. By analyzing individual responses
-              to microgravity, this research aids in the customization of
-              medical interventions, potentially transforming how medical care
-              is administered during long-term space missions. The ability to
-              tailor countermeasures and create personalized medical kits is a
-              significant step forward in ensuring the well-being of astronauts
-              as they venture deeper into space.<br />
-            </p>
-            <p>
-              While the primary aim of tissue chip technology is to support
-              health in space, its applications on Earth are equally promising.
-              These chips are at the cutting edge of biomedical research, with
-              potential uses in modeling diseases, developing new drugs,
-              designing clinical trials, and understanding the impact of
-              chemical and environmental exposures. As a new frontier in human
-              cell-based research, 3D tissue chips offer a method to identify
-              and mitigate the toxicity of therapeutic candidates early in the
-              development process, enhancing the safety and efficacy of medical
-              treatments for everyone.<br />
-            </p>
-            <p>
-              Dive into NASA's mission to harness 3D tissue chip technology for
-              space and beyond, ensuring that the final frontier is safe for
-              those who explore it and beneficial for all of humanity back on
-              Earth.
-            </p>
-
-            <img
-              src="../images/3d-tissue-chips-jpg.webp_w=1536"
-              alt="Image of of the chips nasa used"
-            />
-            <a
-              href="https://science.nasa.gov/mission/3d-tissue-chips/"
-              target="_blank"
-              >Learn more about 3D tissue chips</a
-            >
-          </article>
-        </section>
+    <div class="content-wrapper">
+      <div class="new-content-container">
+        <div class="new-text-content">
+          <p class="intro">
+            <strong>The Universe Awaits: A Glimpse into the Galactic Endeavors of NASA</strong>
+          </p>
+          <p class="intro">
+            <strong>This platform serves as your gateway to the stars, providing an immersive experience into the
+              vastness
+              of space, underscored by the meticulous data gathered from NASA's expeditions. Here, every discovery is a
+              story
+              waiting to be told, every mission a chapter in the grand narrative of space exploration.</strong>
+          </p>
+          <p><a href="https://www.nasa.gov/events/" class="clickable-link"><strong>Click Here</strong></a></p>
+        </div>
+        <a class="nasalink1" href="https://www.nasa.gov/events/" target="_blank">
+          <img src="../images/NasaImageSpace2.jpg" alt="Image of Space From Nasa">
+        </a>
       </div>
-      <div id="slideshow-container">
-        <div id="bigimages">
-          <img
-            src="https://laferger.github.io/ist263/images/mecury.jpg"
-            alt="mercury"
-            id="mercury"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/venus.jpg"
-            alt="venus"
-            id="venus"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/earth.jpg"
-            alt="earth"
-            id="earth"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/mars.jpg"
-            alt="mars"
-            id="mars"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/jupiter.jpg"
-            alt="jupiter"
-            id="jupiter"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/saturn.jpg"
-            alt="saturn"
-            id="saturn"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/uranus.jpg"
-            alt="uranus"
-            id="uranus"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/neptune.jpg"
-            alt="neptune"
-            id="neptune"
-          />
+
+      <div class="new-content-container">
+        <div class="new-text-content">
+          <p class="intro">
+            <strong>Daily Highlights: Exploring NASA's Innovations and Discoveries</strong>
+          </p>
+          <p class="intro">
+            <strong>Join us each day as we showcase multiple aspects of NASA's ongoing research and technological
+              advancements, which are shaping our understanding of the universe. Our features include a wide range of
+              topics, from the latest in planetary exploration to breakthroughs in aerospace technology.</strong>
+          </p>
+          <p><a href="https://www.nasa.gov/news/all-news/" class="clickable-link"><strong>Click Here</strong></a></p>
         </div>
-        <div id="planetinfo">
-          <h1>Planets Slideshow</h1>
-          <div id="mercuryinfo">
-            <h2>Mercury</h2>
-            <p>
-              Mercury is the smallest and innermost planet in the Solar System.
-              Its orbit around the Sun takes 87.97 Earth days, the shortest of
-              all the planets in the Solar System. It is named after the Greek
-              god Hermes (Ερμής), translated into Latin Mercurius Mercury, god
-              of commerce, messenger of the gods, mediator between gods and
-              mortals.
-            </p>
-          </div>
-          <div id="venusinfo">
-            <h2>Venus</h2>
-            <p>
-              Venus is the second planet from the Sun. It is named after the
-              Roman goddess of love and beauty. As the second-brightest natural
-              object in the night sky after the Moon, Venus can cast shadows and
-              can be, on rare occasion, visible to the naked eye in broad
-              daylight. Venus lies within Earth's orbit, and so never appears to
-              venture far from the Sun, either setting in the west just after
-              dusk or rising in the east a bit before dawn. Venus orbits the Sun
-              every 224.7 Earth days.
-            </p>
-          </div>
-          <div id="earthinfo">
-            <h2>Earth</h2>
-            <p>
-              Earth is the third planet from the Sun and the only astronomical
-              object known to harbor life. About 29% of Earth's surface is land
-              consisting of continents and islands. The remaining 71% is covered
-              with water, mostly by oceans but also lakes, rivers and other
-              fresh water, which together constitute the hydrosphere. Much of
-              Earth's polar regions are covered in ice.
-            </p>
-          </div>
-          <div id="marsinfo">
-            <h2>Mars</h2>
-            <p>
-              Mars is a terrestrial planet with a thin atmosphere, with surface
-              features reminiscent of the impact craters of the Moon and the
-              valleys, deserts and polar ice caps of Earth.
-            </p>
-          </div>
-          <div id="jupiterinfo">
-            <h2>Jupiter</h2>
-            <p>
-              Jupiter is the fifth planet from the Sun and the largest in the
-              Solar System. It is a gas giant with a mass one-thousandth that of
-              the Sun, but two-and-a-half times that of all the other planets in
-              the Solar System combined. Jupiter is one of the brightest objects
-              visible to the naked eye in the night sky, and has been known to
-              ancient civilizations since before recorded history. It is named
-              after the Roman god Jupiter.
-            </p>
-          </div>
-          <div id="saturninfo">
-            <h2>Saturn</h2>
-            <p>
-              Saturn is the sixth planet from the Sun and the second-largest in
-              the Solar System, after Jupiter. It is a gas giant with an average
-              radius of about nine times that of Earth. It only has one-eighth
-              the average density of Earth; however, with its larger volume,
-              Saturn is over 95 times more massive.
-            </p>
-          </div>
-          <div id="uranusinfo">
-            <h2>Uranus</h2>
-            <p>
-              Uranus is the seventh planet from the Sun. Its name is a reference
-              to the Greek god of the sky, Uranus, who, according to Greek
-              mythology, was the grandfather of Zeus (Jupiter) and father of
-              Cronus (Saturn). It has the third-largest planetary radius and
-              fourth-largest planetary mass in the Solar System.
-            </p>
-          </div>
-          <div id="neptuneinfo">
-            <h2>Neptune</h2>
-            <p>
-              Neptune is the eighth and farthest-known Solar planet from the
-              Sun. In the Solar System, it is the fourth-largest planet by
-              diameter, the third-most-massive planet, and the densest giant
-              planet. It is 17 times the mass of Earth, slightly more massive
-              than its near-twin Uranus.
-            </p>
-          </div>
+        <a class="nasalink2" href="https://www.nasa.gov/news/all-news/" target="_blank">
+          <img src="../images/NasaImageSpace4.jpg" alt="Image of an exploded star from james webbs">
+        </a>
+      </div>
+    </div>
+
+
+    <div>
+      <section id="mission-of-the-day">
+        <article>
+          <h2 class="text-content">Mission of the Day: NASA's 3D Tissue Chip Research</h2>
+          <div class="content-container">
+            <div class="text-content">
+              <p>
+                In the microgravity conditions of space, human physiology
+                experiences unique changes, necessitating innovative approaches to
+                health monitoring and medical treatment. NASA's groundbreaking 3D
+                tissue chip project is at the forefront of space health
+                technology, offering miniature platforms that mimic the structure
+                and function of human organs. These tissue chips are designed to
+                provide insights into cellular responses during spaceflight,
+                enabling researchers to study potential health issues astronauts
+                might face.<br />
+              </p>
+              <p>
+                The tissue chip technology developed through collaborations
+                between NASA and other research entities is vital for personalized
+                astronaut healthcare in space. By analyzing individual responses
+                to microgravity, this research aids in the customization of
+                medical interventions, potentially transforming how medical care
+                is administered during long-term space missions. The ability to
+                tailor countermeasures and create personalized medical kits is a
+                significant step forward in ensuring the well-being of astronauts
+                as they venture deeper into space.<br />
+              </p>
+              <p>
+                While the primary aim of tissue chip technology is to support
+                health in space, its applications on Earth are equally promising.
+                These chips are at the cutting edge of biomedical research, with
+                potential uses in modeling diseases, developing new drugs,
+                designing clinical trials, and understanding the impact of
+                chemical and environmental exposures. As a new frontier in human
+                cell-based research, 3D tissue chips offer a method to identify
+                and mitigate the toxicity of therapeutic candidates early in the
+                development process, enhancing the safety and efficacy of medical
+                treatments for everyone. Dive into NASA's mission to harness 3D tissue chip technology for
+                space and beyond, ensuring that the final frontier is safe for
+                those who explore it and beneficial for all of humanity back on
+                Earth.<br />
+              </p>
+            </div>
+            <div class="image-container">
+              <img class="article_image" src="../images/3d-tissue-chips-jpg.webp_w=1536"
+                alt="Image of the chips NASA used" />
+
+              <a href="https://science.nasa.gov/mission/3d-tissue-chips/" target="_blank">
+                Learn more about 3D tissue chips
+              </a>
+            </div>
+
+        </article><br>
+    </div>
+    <div id="slideshow-container">
+      <div id="bigimages">
+        <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercury" />
+        <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venus" />
+        <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earth" />
+        <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="mars" />
+        <img src="https://laferger.github.io/ist263/images/jupiter.jpg" alt="jupiter" id="jupiter" />
+        <img src="https://laferger.github.io/ist263/images/saturn.jpg" alt="saturn" id="saturn" />
+        <img src="https://laferger.github.io/ist263/images/uranus.jpg" alt="uranus" id="uranus" />
+        <img src="https://laferger.github.io/ist263/images/neptune.jpg" alt="neptune" id="neptune" />
+      </div>
+      <div id="planetinfo">
+        <h1>Planets Slideshow</h1>
+        <div id="mercuryinfo">
+          <h2>Mercury</h2>
+          <p>
+            Mercury is the smallest and innermost planet in the Solar System.
+            Its orbit around the Sun takes 87.97 Earth days, the shortest of
+            all the planets in the Solar System. It is named after the Greek
+            god Hermes (Ερμής), translated into Latin Mercurius Mercury, god
+            of commerce, messenger of the gods, mediator between gods and
+            mortals.
+          </p>
         </div>
-        <div class="clearfix"></div>
-        <div id="thumbnails">
-          <img
-            src="https://laferger.github.io/ist263/images/mecury.jpg"
-            alt="mercury"
-            id="mercurythumb"
-            onclick="PlanetsOff(); MercuryOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/venus.jpg"
-            alt="venus"
-            id="venusthumb"
-            onclick="PlanetsOff(); VenusOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/earth.jpg"
-            alt="earth"
-            id="earththumb"
-            onclick="PlanetsOff(); EarthOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/mars.jpg"
-            alt="mars"
-            id="marsthumb"
-            onclick="PlanetsOff(); MarsOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/jupiter.jpg"
-            alt="jupiter"
-            id="jupiterthumb"
-            onclick="PlanetsOff(); JupiterOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/saturn.jpg"
-            alt="saturn"
-            id="saturnthumb"
-            onclick="PlanetsOff(); SaturnOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/uranus.jpg"
-            alt="uranus"
-            id="uranusthumb"
-            onclick="PlanetsOff(); UranusOn();"
-          />
-          <img
-            src="https://laferger.github.io/ist263/images/neptune.jpg"
-            alt="neptune"
-            id="neptunethumb"
-            onclick="PlanetsOff(); NeptuneOn();"
-          />
+        <div id="venusinfo">
+          <h2>Venus</h2>
+          <p>
+            Venus is the second planet from the Sun. It is named after the
+            Roman goddess of love and beauty. As the second-brightest natural
+            object in the night sky after the Moon, Venus can cast shadows and
+            can be, on rare occasion, visible to the naked eye in broad
+            daylight. Venus lies within Earth's orbit, and so never appears to
+            venture far from the Sun, either setting in the west just after
+            dusk or rising in the east a bit before dawn. Venus orbits the Sun
+            every 224.7 Earth days.
+          </p>
+        </div>
+        <div id="earthinfo">
+          <h2>Earth</h2>
+          <p>
+            Earth is the third planet from the Sun and the only astronomical
+            object known to harbor life. About 29% of Earth's surface is land
+            consisting of continents and islands. The remaining 71% is covered
+            with water, mostly by oceans but also lakes, rivers and other
+            fresh water, which together constitute the hydrosphere. Much of
+            Earth's polar regions are covered in ice.
+          </p>
+        </div>
+        <div id="marsinfo">
+          <h2>Mars</h2>
+          <p>
+            Mars is a terrestrial planet with a thin atmosphere, with surface
+            features reminiscent of the impact craters of the Moon and the
+            valleys, deserts and polar ice caps of Earth.
+          </p>
+        </div>
+        <div id="jupiterinfo">
+          <h2>Jupiter</h2>
+          <p>
+            Jupiter is the fifth planet from the Sun and the largest in the
+            Solar System. It is a gas giant with a mass one-thousandth that of
+            the Sun, but two-and-a-half times that of all the other planets in
+            the Solar System combined. Jupiter is one of the brightest objects
+            visible to the naked eye in the night sky, and has been known to
+            ancient civilizations since before recorded history. It is named
+            after the Roman god Jupiter.
+          </p>
+        </div>
+        <div id="saturninfo">
+          <h2>Saturn</h2>
+          <p>
+            Saturn is the sixth planet from the Sun and the second-largest in
+            the Solar System, after Jupiter. It is a gas giant with an average
+            radius of about nine times that of Earth. It only has one-eighth
+            the average density of Earth; however, with its larger volume,
+            Saturn is over 95 times more massive.
+          </p>
+        </div>
+        <div id="uranusinfo">
+          <h2>Uranus</h2>
+          <p>
+            Uranus is the seventh planet from the Sun. Its name is a reference
+            to the Greek god of the sky, Uranus, who, according to Greek
+            mythology, was the grandfather of Zeus (Jupiter) and father of
+            Cronus (Saturn). It has the third-largest planetary radius and
+            fourth-largest planetary mass in the Solar System.
+          </p>
+        </div>
+        <div id="neptuneinfo">
+          <h2>Neptune</h2>
+          <p>
+            Neptune is the eighth and farthest-known Solar planet from the
+            Sun. In the Solar System, it is the fourth-largest planet by
+            diameter, the third-most-massive planet, and the densest giant
+            planet. It is 17 times the mass of Earth, slightly more massive
+            than its near-twin Uranus.
+          </p>
         </div>
       </div>
-    </main>
+      <div class="clearfix"></div>
+      <div id="thumbnails">
+        <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercurythumb"
+          onclick="PlanetsOff(); MercuryOn();" />
+        <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venusthumb"
+          onclick="PlanetsOff(); VenusOn();" />
+        <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earththumb"
+          onclick="PlanetsOff(); EarthOn();" />
+        <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="marsthumb"
+          onclick="PlanetsOff(); MarsOn();" />
+        <img src="https://laferger.github.io/ist263/images/jupiter.jpg" alt="jupiter" id="jupiterthumb"
+          onclick="PlanetsOff(); JupiterOn();" />
+        <img src="https://laferger.github.io/ist263/images/saturn.jpg" alt="saturn" id="saturnthumb"
+          onclick="PlanetsOff(); SaturnOn();" />
+        <img src="https://laferger.github.io/ist263/images/uranus.jpg" alt="uranus" id="uranusthumb"
+          onclick="PlanetsOff(); UranusOn();" />
+        <img src="https://laferger.github.io/ist263/images/neptune.jpg" alt="neptune" id="neptunethumb"
+          onclick="PlanetsOff(); NeptuneOn();" />
+      </div>
+    </div>
+  </main>
 
-    <footer>
-      <p>&copy; 2023 Gabriel Davila - Campos</p>
-    </footer>
-  </body>
+  <footer>
+    <hr />
+    <div class="left">&copy; 2023 Gabriel Davila - Campos</div>
+    <div class="right">
+      “You might not think that programmers are artists, but programming is an
+      extremely creative profession. It's logic-based creativity.” - John
+      Romero"
+    </div>
+  </footer>
+</body>
+
 </html>

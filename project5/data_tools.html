@@ -1,248 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Davila - Campos | Interactive Data Tools</title>
-    <link rel="stylesheet" href="../project5/NASA/project.css">
-    <link rel="stylesheet" href="../project5/javascript.js">
-    <style>
-      .game-link-card {
-        border: 2px solid #4fc3f7;
-        border-radius: 10px;
-        overflow: hidden;
-        text-align: center;
-        transition: transform 0.3s ease;
-      }
 
-      .game-link-card:hover {
-        transform: scale(1.05);
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Davila - Campos | Interactive Data Tools</title>
+  <link rel="stylesheet" href="../project5/NASA/project.css" />
+  <link rel="stylesheet" href="../project5/javascript.js" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/Newerfavicon.png" />
 
-      .game-link-card a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-      }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Orbitron:wght@600&display=swap"
+    rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+    }
 
-      .game-thumbnail {
-        width: 100%;
-        height: auto;
-      }
+    .game-link-card {
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-      .game-description {
-        background-color: #000;
-        padding: 15px;
-      }
+    .game-link-card:hover {
+      transform: scale(1.05);
+    }
 
-      .game-description h3 {
-        margin-top: 0;
-      }
-      #getting-started,
-      #data-tools-list {
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        margin: 20px 0;
-        color: #fff;
-      }
+    .game-link-card a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
 
-      #data-tools-list ul {
-        padding-left: 20px;
-      }
+    .game-thumbnail {
+      width: 100%;
+      height: auto;
+    }
 
-      #data-tools-list a {
-        color: #4fc3f7;
-        text-decoration: none;
-      }
+    .game-description {
+      background-color: #000;
+      padding: 15px;
+    }
 
-      #data-tools-list a:hover {
-        color: #ff0;
-      }
+    .game-description h3 {
+      margin-top: 0;
+    }
 
-      h2,
-      h3 {
-        color: #4fc3f7;
-      }
-      .game-link-card {
-        text-align: center;
-      }
+    #getting-started,
+    #data-tools-list {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      color: #fff;
+    }
 
-      .game-link-card a {
-        color: #fff;
-        text-decoration: none;
-      }
+    #data-tools-list ul {
+      padding-left: 20px;
+    }
 
-      .game-thumbnail {
-        max-width: 150px;
-        height: auto;
-        display: block;
+    #data-tools-list a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    #data-tools-list a:hover {
+      color: #ff0;
+    }
+
+    h2,
+    h3 {
+      color: #4fc3f7;
+    }
+
+    .game-link-card {
+      text-align: center;
+    }
+
+    .game-link-card a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .game-thumbnail {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .nasa-link-card {
+      text-align: center;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 20px 0;
+    }
+
+    .nasa-link-card:hover {
+      transform: scale(1.05);
+    }
+
+    .nasa-thumbnail {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .nasa-description {
+      padding: 15px;
+      color: #fff;
+    }
+
+    .nasa-description .link-text a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nasa-description .link-text a:hover {
+      color: #ff0;
+    }
+
+
+    #getting-started,
+    #data-tools-list {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      color: #fff;
+    }
+
+    #data-tools-list ul {
+      padding-left: 20px;
+    }
+
+    #data-tools-list a,
+    .nasa-link-card a,
+    .game-link-card a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    #data-tools-list a:hover,
+    .nasa-link-card a:hover,
+    .game-link-card a:hover {
+      color: rgb(154, 154, 172);
+    }
+
+    h2,
+    h3 {
+      color: #ffffff;
+    }
+
+    .data_tools_text_center {
+      margin: 20px;
+    }
+
+    .game-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #777777;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .space-invaders-iframe {
+      width: 100%;
+      height: 550px;
+      border: none;
+      display: block;
+    }
+
+    @media screen and (max-width: 820px) {
+      .game-container {
+        width: 95%;
         margin: 0 auto;
       }
-      .nasa-link-card {
-        text-align: center;
-        border: 2px solid #4fc3f7;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        background-color: rgba(0, 0, 0, 0.6);
-        margin: 20px 0;
-      }
+    }
+  </style>
+</head>
 
-      .nasa-link-card:hover {
-        transform: scale(1.05);
-      }
+<body>
+  <nav>
+    <div class="logo">
+      <p>Explore</p>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="missions.html">Learn More</a></li>
+      <li><a href="data_tools.html">Interactive Data Tools</a></li>
+      <li><a href="my_journey.html">Contact</a></li>
+    </ul>
+  </nav>
 
-      .nasa-thumbnail {
-        max-width: 150px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-      }
+  <header>
+    <h1>Analyze The Cosmos</h1><br>
+    <p class="data_tools_text_center">
+      Dive into real NASA datasets and navigate through the wonders of space.
+      Whether you're a data enthusiast or a space lover, these interactive
+      tools provide a hands-on experience, fostering a deeper understanding of
+      NASA's extraordinary work
+    </p>
+  </header>
 
-      .nasa-description {
-        padding: 15px;
-        color: #fff;
-      }
 
-      .nasa-description .link-text a {
-        color: #4fc3f7;
-        text-decoration: none;
-      }
 
-      .nasa-description .link-text a:hover {
-        color: #ff0;
-      }
-      /*nav {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 23px;
-        transition: color 0.3s ease-in-out;
-      }
-
-      nav a:hover {
-        color: #4fc3f7;
-      }*/
-      #getting-started,
-      #data-tools-list {
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        margin: 20px 0;
-        color: #fff;
-      }
-
-      #data-tools-list ul {
-        padding-left: 20px;
-      }
-
-      #data-tools-list a,
-      .nasa-link-card a,
-      .game-link-card a {
-        color: #4fc3f7;
-        text-decoration: none;
-      }
-
-      #data-tools-list a:hover,
-      .nasa-link-card a:hover,
-      .game-link-card a:hover {
-        color: #ff0;
-      }
-
-      h2,
-      h3 {
-        color: #4fc3f7;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <h1>Analyze The Cosmos</h1>
+  <main>
+    <section id="getting-started">
+      <h2>Getting Started</h2>
       <p>
-        Dive into real NASA datasets and navigate through the wonders of space.
-        Whether you're a data enthusiast or a space lover, these interactive
-        tools provide a hands-on experience, fostering a deeper understanding of
-        NASA's extraordinary work
+        Not sure where to begin? Start with these Interactive Tools and become
+        a space data explorer in minutes!
       </p>
-    </header>
+    </section>
 
-    <nav class="text-size">
-      <a href="index.html">Home</a><br>
-      <a href="missions.html">Missions in Detail</a><br>
-      <a href="data_tools.html">Interactive Data Tools</a><br>
-      <a href="my_journey.html">My Journey</a><br>
-    </nav>
+    <section id="data-tools-list">
+      <h2>List of Tools</h2>
+      <p>Here you'll find some exciting tools to explore:</p>
 
-    <main>
-      <section id="getting-started">
-        <h2>Getting Started</h2>
-        <p>
-          Not sure where to begin? Start with these Interactive Tools and become
-          a space data explorer in minutes!
-        </p>
-      </section>
+      <iframe src="https://www.solarsystemscope.com/iframe" class="responsive-iframe" width="1383" height="600"
+        style="min-width:500px; min-height: 400px; border: 2px solid #ffffff;"></iframe>
 
-      <section id="data-tools-list">
-        <h2>List of Tools</h2>
-        <p>Here you'll find some exciting tools to explore:</p>
 
-        
 
-        <div class="nasa-link-card">
-          <a href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">
-            <img src="../images/nasa.png" alt="NASA JPL/EYES" class="nasa-thumbnail">
-          </a>
-          <div class="nasa-description">
-            <h3>NASA JPL/EYES</h3>
+      <div class="nasa-link-card">
+        <a href="https://eyes.nasa.gov/apps/orrery/#/home" target="_blank">
+          <img src="../images/nasa.png" alt="NASA JPL/EYES" class="nasa-thumbnail" />
+        </a>
+        <div class="nasa-description">
+          <h3>NASA JPL/EYES</h3>
+          <p>
+            NASA's Eyes, developed by the Jet Propulsion Laboratory (JPL) at
+            the California Institute of Technology, is an interactive program
+            that allows users to explore Earth, the solar system, and the
+            universe. It offers a unique educational experience for learning
+            about our planet, the solar system, and the vastness of space, as
+            well as the various spacecraft exploring these realms.
+          </p>
+          <p class="link-text">
+            Click
+            <a href="https://eyes.nasa.gov/apps/orrery/#/home">here</a> to go
+            to NASA's Interactive Solar System.
+          </p>
+        </div>
+      </div>
+
+      <div class="game-link-card">
+        <a href="https://spaceplace.nasa.gov/menu/play/" target="_blank">
+          <div class="game-thumbnail">
+            <img src="../images/nasa.png" alt="NASA Space Game" />
+          </div>
+          <div class="game-description">
+            <h3>Explore NASA's Space Adventures</h3>
             <p>
-              NASA's Eyes, developed by the Jet Propulsion Laboratory (JPL) at
-              the California Institute of Technology, is an interactive
-              program that allows users to explore Earth, the solar system,
-              and the universe. It offers a unique educational experience for
-              learning about our planet, the solar system, and the vastness of
-              space, as well as the various spacecraft exploring these realms.
-            </p>
-            <p class="link-text">
-              Click
-              <a href="https://eyes.nasa.gov/apps/orrery/#/home">here</a> to
-              go to NASA's Interactive Solar System.
+              Click here to play interactive space games and learn about the
+              cosmos in a fun way!
             </p>
           </div>
-        </div>
-        
+        </a>
+      </div><br>
+      <div class="game-container">
+        <h2>Play Space Invaders!</h2>
+        <iframe src="https://funhtml5games.com?embed=spaceinvaders" class="space-invaders-iframe" frameborder="0"
+          scrolling="no"></iframe>
+      </div>
 
-        <div class="game-link-card">
-          <a href="https://spaceplace.nasa.gov/menu/play/" target="_blank">
-            <div class="game-thumbnail">
-              <img src="../images/nasa.png" alt="NASA Space Game">
-            </div>
-            <div class="game-description">
-              <h3>Explore NASA's Space Adventures</h3>
-              <p>
-                Click here to play interactive space games and learn about the
-                cosmos in a fun way!
-              </p>
-            </div>
-          </a>
-        </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>&copy; 2023 Gabriel Davila - Campos</p>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <div class="left">&copy; 2023 Gabriel Davila - Campos</div>
+    <div class="right">
+      “You might not think that programmers are artists, but programming is an
+      extremely creative profession. It's logic-based creativity.” - John
+      Romero"
+    </div>
+  </footer>
+</body>
+
 </html>
