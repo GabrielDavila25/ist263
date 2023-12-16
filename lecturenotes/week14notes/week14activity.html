@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week14Activity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1,
+      P {
+        font-family: "Indie Flower", cursive;
+      }
+      #modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        margin-left: -100px;
+        margin-top: -100px;
+        display: none;
+      }
+      #subscribe {
+        background-color: blue;
+        padding: 5px;
+        width: 250px;
+        text-align: center;
+      }
+      #close-button {
+        text-align: right;
+        margin: 0px;
+      }
+      #font-modal {
+        font-family: "Indie Flower", cursive;
+      }
+    </style>
+    <script>
+      function openModal() {
+        document.getElementById("modal").style.display = "block";
+      }
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Modal and Font Informative Page</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, a eum
+      veritatis illo laudantium sit natus dignissimos temporibus fugit iste
+      rerum cumque odio possimus magni laborum commodi tempore? Atque, dolores.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+      magnam voluptates voluptatum excepturi esse aspernatur autem qui sequi
+      provident dolorum ea inventore, distinctio aliquid quisquam velit. Maiores
+      quam dignissimos ipsa! Lorem, ipsum dolor sit amet consectetur adipisicing
+      elit. Architecto tenetur facilis qui necessitatibus voluptatem magnam
+      consequatur distinctio, illo cum, molestias natus deserunt doloribus quas?
+      Nihil ipsa sequi voluptatum quam sed?
+    </p>
+    <p id="subscribe" onclick="openModal();">Subscribe to Our Newsletter</p>
+    <div id="modal">
+      <p id="close-button" onclick="closeModal();">X</p>
+      <p>Subscribe to Our Newsletter</p>
+      <form id="font-modal">
+        <label>Name</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label><br />
+        <input type="text" id="email" name="email" /><br />
+        <input type="submit" value="Subscribe" />
+      </form>
+    </div>
+  </body>
+</html>

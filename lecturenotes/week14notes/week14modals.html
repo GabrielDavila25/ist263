@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modals</title>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+      }
+      #container {
+        width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
+      #modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        margin-left: -100px;
+        margin-top: -100px;
+        display: none;
+      }
+      #subscribe {
+        background-color: blue;
+        padding: 5px;
+        width: 250px;
+        text-align: center;
+      }
+      #close-button {
+        text-align: right;
+        margin: 0px;
+      }
+    </style>
+    <script>
+      function openModal() {
+        document.getElementById("modal").style.display = "block";
+      }
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <img
+        src="https://laferger.github.io/ist263/images/cupcakes.jpg"
+        alt="banner of cupcakes"
+      />
+      <h1>Desserts</h1>
+      <p>
+        Chocolate bar jelly-o macaroon tart lollipop tart. Lollipop muffin
+        fruitcake jelly-o dessert. Powder cookie sweet roll sugar plum
+        liquorice. Donut tootsie roll jelly beans brownie gummi bears. Tiramisu
+        shortbread powder cake biscuit muffin fruitcake. Muffin wafer caramels
+        marzipan dragée croissant gummies cake tiramisu. Bear claw wafer dragée
+        sesame snaps dragée dragée biscuit. Muffin muffin tootsie roll danish
+        topping. Bonbon chocolate dragée biscuit sugar plum jelly beans cotton
+        candy. Gummies jelly pie cookie tiramisu cake. Shortbread gummi bears
+        powder pastry sweet toffee jelly gummi bears soufflé. Oat cake jelly
+        marshmallow chocolate dessert fruitcake. Chocolate cake lollipop sweet
+        roll marzipan lemon drops dragée cake biscuit sweet. Cake icing marzipan
+        gingerbread jelly bonbon gummies tart. Cotton candy danish toffee sweet
+        roll gummi bears icing sweet carrot cake bonbon. Sesame snaps pie ice
+        cream sweet roll candy canes carrot cake pudding liquorice. Danish
+        biscuit tootsie roll candy sesame snaps cake candy canes candy canes
+        chocolate cake. Macaroon oat cake gummi bears croissant pie gummi bears
+        candy. Toffee cupcake candy canes tootsie roll jelly ice cream. Chupa
+        chups gummies cheesecake gingerbread cheesecake donut. Toffee topping
+        chocolate bar bear claw pudding dessert. Sugar plum caramels sugar plum
+        pie powder liquorice. Croissant candy canes cookie gummi bears tootsie
+        roll oat cake dragée tootsie roll. Muffin caramels carrot cake brownie
+        pie danish croissant sweet roll. Cake cheesecake sweet jujubes candy
+        canes dragée. Tootsie roll caramels tiramisu pudding cookie candy
+        brownie. Marshmallow jelly cookie cupcake chupa chups cheesecake brownie
+        sugar plum. Jujubes jelly pie caramels lollipop pie marshmallow
+        chocolate cake. Lollipop carrot cake chocolate fruitcake pie chocolate
+        croissant halvah ice cream. Tiramisu dessert cupcake gummi bears tart
+        chocolate cake oat cake sesame snaps. Sesame snaps toffee topping halvah
+        biscuit lemon drops brownie. Topping oat cake chocolate bar danish
+        powder. Cookie topping muffin powder apple pie donut. Oat cake
+        cheesecake toffee cake soufflé wafer. Jujubes pastry tootsie roll
+        pudding halvah croissant marshmallow. Tart cake shortbread topping
+        fruitcake sesame snaps apple pie. Biscuit lemon drops marshmallow
+        gingerbread sweet roll chocolate bar. Macaroon chocolate cake dessert
+        pastry lemon drops tootsie roll cotton candy candy muffin. Chocolate bar
+        biscuit halvah pie liquorice. Wafer jujubes gummi bears chocolate bar
+        dragée cookie jelly-o biscuit sesame snaps.
+      </p>
+      <p id="subscribe" onclick="openModal();">Subscribe to Our Mailing List</p>
+    </div>
+    <div id="modal">
+      <p id="close-button" onclick="closeModal();">X</p>
+      <form>
+        <label>Name</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label><br />
+        <input type="text" id="email" name="email" /><br />
+        <input type="submit" value="Subscribe" />
+      </form>
+    </div>
+  </body>
+</html>
